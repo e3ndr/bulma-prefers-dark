@@ -2,8 +2,15 @@
 /*! Bulma Prefers Dark  | MIT License | github.com/jloh/bulma-prefers-dark */
 
 @import "sass/utilities/_all"
-+prefers-scheme(dark)
+.bulma-dark-mode
   @import "sass/base/_all"
   @import "sass/elements/_all"
   @import "sass/components/_all"
   @import "sass/layout/_all"
+
+
+/* I'm not a sass expert, so this is my work around. -e3ndr */
+$body-background-color-dark: $body-background-dark !default
+
+html.bulma-dark-mode
+  background-color: $body-background-color-dark
